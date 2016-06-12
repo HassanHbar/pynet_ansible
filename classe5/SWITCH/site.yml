@@ -1,0 +1,6 @@
+---
+- name: Generate Classe 5 exercices configs
+  hosts: local
+
+  roles:
+        - switch

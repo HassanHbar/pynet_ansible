@@ -1,0 +1,32 @@
+---
+
+- name: Attach Arista Interface to Vlans
+  hosts: arista
+
+
+  tasks:
+    - name: Configure Interfaces in Access mode and put them in aqequate VLAN
+      eos_switchport: name={{item.interface}} mode=access access_vlan={{item.vlan}}
+            username={{ eapi_username }}
+            password={{ eapi_password }}
+            host={{ eapi_hostname }}
+            port={{ eapi_port }}
+            transport=https
+      
+      with_items:
+ 
+            - {interface: Ethernet7, vlan: 700, }
+            - {interface: Ethernet2, vlan: 900, }
+
+    - name: Enable and Configure Interface Descrition
+      eos_interface: name={{item.interface}} description="*** IN USE ***" enable={{item.enable}}
+            username={{ eapi_username }}
+            password={{ eapi_password }}
+            host={{ eapi_hostname }}
+            port={{ eapi_port }}
+            transport=https
+
+      with_items:
+
+            - {interface: Ethernet7, enable: 'True', }
+            - {interface: Ethernet2, enable: 'True', }

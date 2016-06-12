@@ -1,0 +1,19 @@
+[local]
+localhost ansible_connection=local
+
+[arista]
+# primary interface == Ethernet7
+# secondary interface == Ethernet2
+pynet-sw2 eapi_username=eapi eapi_password=7maxwell7 eapi_hostname=50.76.53.27 eapi_port=8343
+
+[arista:vars]
+ansible_python_interpreter=~/applied_python/bin/python
+ansible_connection=local
+
+[cisco]
+pynet-rtr1 host=50.76.53.27 port=22 username=pyclass password=88newclass
+pynet-rtr2 host=50.76.53.27 port=8022 username=pyclass password=88newclass
+
+[cisco:vars]
+ansible_python_interpreter=~/applied_python/bin/python
+ansible_connection=local 

@@ -1,0 +1,20 @@
+
+service timestamps debug datetime msec localtime show-timezone
+service timestamps log datetime msec localtime show-timezone
+!
+hostname {{item.hostname}}
+!
+logging buffered 32000
+no logging console
+!
+{% if item.DHCP %}
+no ip dhcp conflict logging
+!
+ip dhcp pool POOL1
+    network {{item.dhcp_network}} 255.255.255.0
+    default-router {{item.ip_addr}}
+    dns-server 8.8.8.8 8.8.4.4
+{% endif %}
+!
+interface vlan1
+  ip address {{item.ip_addr}} 255.255.255.255

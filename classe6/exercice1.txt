@@ -1,0 +1,70 @@
+(applied_python)[hhbar@ip-172-30-0-38 classe6]$ ansible-playbook exercice_1_Arista_Vlan.yml --check --module-path ~/ANSIBLE/library/
+
+PLAY [Create Arista Vlans] **************************************************** 
+
+GATHERING FACTS *************************************************************** 
+ok: [pynet-sw2]
+
+TASK: [Create Vlan 900] ******************************************************* 
+changed: [pynet-sw2]
+
+TASK: [Create Vlan 700] ******************************************************* 
+changed: [pynet-sw2]
+
+TASK: [Create Vlan 500] ******************************************************* 
+changed: [pynet-sw2]
+
+PLAY RECAP ******************************************************************** 
+pynet-sw2                  : ok=4    changed=3    unreachable=0    failed=0   
+
+(applied_python)[hhbar@ip-172-30-0-38 classe6]$ 
+
+(applied_python)[hhbar@ip-172-30-0-38 ~]$ ssh -l eapi 50.76.53.27 -p 8322
+Password: 
+Last login: Sun Dec 12 22:46:22 2010 from 52.8.70.38
+pynet-sw2>en
+pynet-sw2#
+pynet-sw2#sh vlan 
+VLAN  Name                             Status    Ports
+----- -------------------------------- --------- -------------------------------
+1     default                          active    Cpu, Et1, Et3, Et4, Et5, Et6
+226   black                            active   
+255   red                              active   
+
+
+
+pynet-sw2#sh vlan 
+VLAN  Name                             Status    Ports
+----- -------------------------------- --------- -------------------------------
+1     default                          active    Cpu, Et1, Et3, Et4, Et5, Et6
+226   black                            active   
+255   red                              active   
+
+pynet-sw2#sh vlan 
+VLAN  Name                             Status    Ports
+----- -------------------------------- --------- -------------------------------
+1     default                          active    Cpu, Et1, Et3, Et4, Et5, Et6
+226   black                            active   
+255   red                              active   
+900   VLAN0900                         active   
+
+pynet-sw2#sh vlan
+VLAN  Name                             Status    Ports
+----- -------------------------------- --------- -------------------------------
+1     default                          active    Cpu, Et1, Et3, Et4, Et5, Et6
+226   black                            active   
+255   red                              active   
+700   VLAN0700                         active   
+900   TEST_VLAN_900                    active   
+
+pynet-sw2#sh vlan
+VLAN  Name                             Status    Ports
+----- -------------------------------- --------- -------------------------------
+1     default                          active    Cpu, Et1, Et3, Et4, Et5, Et6
+226   black                            active   
+255   red                              active   
+500   TEST_VLAN_500                    active   
+700   TEST_VLAN_700                    active   
+900   TEST_VLAN_900                    active   
+
+pynet-sw2#

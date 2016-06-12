@@ -1,0 +1,3 @@
+no logging console
+logging buffer 20012
+do sh ip int brief

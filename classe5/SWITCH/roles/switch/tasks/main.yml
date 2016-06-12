@@ -1,0 +1,5 @@
+---
+    - name: Generate Configuration file
+      template: src=switch.j2
+                 dest=/home/hhbar/ANSIBLE/CFGS/classe5_exercice3/{{item.hostname}}.txt
+      with_items: test_switchs

@@ -1,0 +1,9 @@
+---
+test_routers:        
+        - {hostname: pynet-rtr1, ip_addr: 1.1.1.1}
+        - {hostname: pynet-rtr2, ip_addr: 1.1.1.2}
+        - {hostname: pynet-rtr3, ip_addr: 1.1.1.3}
+        - {hostname: pynet-rtr4, ip_addr: 1.1.1.4}
+        - {hostname: pynet-rtr5, ip_addr: 1.1.1.5}
+        - {hostname: pynet-rtr6, ip_addr: 1.1.1.6}
+        - {hostname: pynet-rtr7, ip_addr: 1.1.1.7}

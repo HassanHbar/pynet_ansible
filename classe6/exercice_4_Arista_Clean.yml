@@ -1,0 +1,32 @@
+---
+
+- name: Arista Cleanup module
+  hosts: arista
+
+
+  tasks:
+    - name: Clean switchport configure for all Interfaces 
+      eos_switchport: name={{item.interface}} mode=access access_vlan=1 trunk_native_vlan=1 trunk_allowed_vlans=1-4094
+            username={{ eapi_username }}
+            password={{ eapi_password }}
+            host={{ eapi_hostname }}
+            port={{ eapi_port }}
+            transport=https
+      
+      with_items:
+ 
+            - {interface: Ethernet7, }
+            - {interface: Ethernet2, }
+
+    - name: Reset description to default
+      eos_interface: name={{item}} description=""
+            username={{ eapi_username }}
+            password={{ eapi_password }}
+            host={{ eapi_hostname }}
+            port={{ eapi_port }}
+            transport=https
+
+      with_items:
+
+            - Ethernet7
+            - Ethernet2

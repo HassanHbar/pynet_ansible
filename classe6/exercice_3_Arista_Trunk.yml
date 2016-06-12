@@ -1,0 +1,18 @@
+---
+
+- name: Attach Arista Interface to Vlans
+  hosts: arista
+
+
+  tasks:
+    - name: Configure Interfaces in Trunk mode, permit all VLANs in the trunk and use Vlan 1 as native Vlan
+      eos_switchport: name={{item.interface}} mode=trunk trunk_native_vlan=1 trunk_allowed_vlans={{item.vlans}}
+            username={{ eapi_username }}
+            password={{ eapi_password }}
+            host={{ eapi_hostname }}
+            port={{ eapi_port }}
+            transport=https
+      
+      with_items:
+ 
+            - {interface: Ethernet7, vlans: "700,900,500" }

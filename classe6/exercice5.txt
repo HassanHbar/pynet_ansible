@@ -1,0 +1,49 @@
+"exercice_5_Cisco.yml" 18L, 448C written                                                              
+(applied_python)[hhbar@ip-172-30-0-38 classe6]$ ansible-playbook exercice_5_Cisco.yml --check --module-path ~/ANSIBLE/library/
+
+PLAY [Transfert Cisco IOS config] ********************************************* 
+
+TASK: [File transfert] ******************************************************** 
+changed: [pynet-rtr2]
+changed: [pynet-rtr1]
+
+PLAY RECAP ******************************************************************** 
+pynet-rtr1                 : ok=1    changed=1    unreachable=0    failed=0   
+pynet-rtr2                 : ok=1    changed=1    unreachable=0    failed=0   
+
+(applied_python)[hhbar@ip-172-30-0-38 classe6]
+
+
+
+
+
+applied_python)[hhbar@ip-172-30-0-38 classe6]$ ansible-playbook exercice_5_Cisco.yml  --module-path ~/ANSIBLE/library/
+
+PLAY [Transfert Cisco IOS config] ********************************************* 
+
+TASK: [File transfert] ******************************************************** 
+changed: [pynet-rtr1]
+changed: [pynet-rtr2]
+
+PLAY RECAP ******************************************************************** 
+pynet-rtr1                 : ok=1    changed=1    unreachable=0    failed=0   
+pynet-rtr2                 : ok=1    changed=1    unreachable=0    failed=0   
+
+(applied_python)[hhbar@ip-172-30-0-38 classe6]$
+
+
+pynet-rtr2#sh running-config | in scp
+pynet-rtr2#sh running-config | in scp
+ip scp server enable
+
+
+
+pynet-rtr2#sh flash:         
+249   59 Jun 1 2016 12:00:52 -07:00 Hassan_Cisco_config.txt
+
+pynet-rtr2#more Hassan_Cisco_config.txt
+no logging console
+logging buffer 20012
+do sh ip int brief
+
+

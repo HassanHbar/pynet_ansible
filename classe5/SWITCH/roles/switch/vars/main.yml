@@ -1,0 +1,14 @@
+---
+test_switchs:
+       
+        - {hostname: pynet-sw1, SNMPv3: True, secret: Cisco123, access_vlan: 10, ip_addr: 172.16.10.1, default_gateway: 172.16.10.255, snmp_community: SNMPRO}
+        - {hostname: pynet-sw2, SNMPv3: True, secret: Cisco123, access_vlan: 20, ip_addr: 172.16.20.1, default_gateway: 172.16.20.255, snmp_community: SNMPRO}
+        - {hostname: pynet-sw3, SNMPv3: False, secret: Cisco123, access_vlan: 30, ip_addr: 172.16.30.1, default_gateway: 172.16.30.255, snmp_community: SNMPRO}
+        - {hostname: pynet-sw4, SNMPv3: False, secret: Cisco123, access_vlan: 40, ip_addr: 172.16.40.1, default_gateway: 172.16.40.255, snmp_community: SNMPRO}
+        - {hostname: pynet-sw5, SNMPv3: False, secret: Cisco123, access_vlan: 50, ip_addr: 172.16.50.1, default_gateway: 172.16.50.255, snmp_community: SNMPRO}
+
+
+
+
+
+

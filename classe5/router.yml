@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  vars:
+    hostname: pynet-rtr1
+  tasks:
+    - name: Generate Configuration file
+      template: src=/home/hhbar/ANSIBLE/classe5/router1.j2
+                 dest=/home/hhbar/ANSIBLE/CFGS/router1.txt

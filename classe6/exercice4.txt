@@ -1,0 +1,33 @@
+
+
+(applied_python)[hhbar@ip-172-30-0-38 classe6]$ ansible-playbook exercice_4_Arista_Clean.yml  --module-path ~/ANSIBLE/library/
+
+PLAY [Arista Cleanup module] ************************************************** 
+
+GATHERING FACTS *************************************************************** 
+ok: [pynet-sw2]
+
+TASK: [Clean switchport configure for all Interfaces] ************************* 
+changed: [pynet-sw2] => (item={'interface': 'Ethernet7'})
+changed: [pynet-sw2] => (item={'interface': 'Ethernet2'})
+
+TASK: [Reset description to default] ****************************************** 
+changed: [pynet-sw2] => (item=Ethernet7)
+changed: [pynet-sw2] => (item=Ethernet2)
+
+PLAY RECAP ******************************************************************** 
+pynet-sw2                  : ok=3    changed=2    unreachable=0    failed=0   
+
+(applied_python)[hhbar@ip-172-30-0-38 classe6]$ 
+
+interface Ethernet2
+!
+interface Ethernet3
+!
+interface Ethernet4
+!
+interface Ethernet5
+!
+interface Ethernet6
+!
+interface Ethernet7

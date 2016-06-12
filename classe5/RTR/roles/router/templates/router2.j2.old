@@ -1,0 +1,11 @@
+
+service timestamps debug datetime msec localtime show-timezone
+service timestamps log datetime msec localtime show-timezone
+!
+hostname {{item.hostname}}
+!
+logging buffered 32000
+no logging console
+!
+interface loopback0
+  ip address {{item.ip_addr}} 255.255.255.255

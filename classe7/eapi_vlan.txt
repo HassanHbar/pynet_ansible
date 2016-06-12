@@ -1,0 +1,35 @@
+pynet-sw2#sh vlan
+VLAN  Name                             Status    Ports
+----- -------------------------------- --------- -------------------------------
+1     default                          active    Cpu, Et1, Et3, Et4, Et5, Et6
+226   black                            active   
+255   red                              active 
+
+(applied_python)[hhbar@ip-172-30-0-38 classe7]$ python eapi_vlan.py --remove 903
+ vlan 903 is abscent from the Vlan Data base
+
+(applied_python)[hhbar@ip-172-30-0-38 classe7]$ python eapi_vlan.py --name Black 225
+ vlan 225, name Black was added successfully 
+
+pynet-sw2#sh vlan
+VLAN  Name                             Status    Ports
+----- -------------------------------- --------- -------------------------------
+1     default                          active    Cpu, Et1, Et3, Et4, Et5, Et6
+225   Black                            active   
+226   black                            active   
+255   red                              active 
+
+(applied_python)[hhbar@ip-172-30-0-38 classe7]$ python eapi_vlan.py --name Black 225
+ vlan 225 already exist 
+
+(applied_python)[hhbar@ip-172-30-0-38 classe7]$ python eapi_vlan.py --remove 225
+ vlan 225 was removed successfully
+
+
+pynet-sw2#sh vlan
+VLAN  Name                             Status    Ports
+----- -------------------------------- --------- -------------------------------
+1     default                          active    Cpu, Et1, Et3, Et4, Et5, Et6
+226   black                            active   
+255   red                              active   
+

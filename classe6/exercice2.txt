@@ -1,0 +1,77 @@
+
+(applied_python)[hhbar@ip-172-30-0-38 classe6]$ ansible-playbook exercice_2_Arista_Int.yml --module-path ~/ANSIBLE/library/ --check
+
+PLAY [Attach Arista Interface to Vlans] *************************************** 
+
+GATHERING FACTS *************************************************************** 
+ok: [pynet-sw2]
+
+TASK: [Configure Interfaces in Access mode and put them in aqequate VLAN] ***** 
+ok: [pynet-sw2] => (item={'interface': 'Ethernet7', 'vlan': 700})
+ok: [pynet-sw2] => (item={'interface': 'Ethernet2', 'vlan': 900})
+
+TASK: [Enable and Configure Interface Descrition] ***************************** 
+ok: [pynet-sw2] => (item={'interface': 'Ethernet7', 'enable': 'True'})
+changed: [pynet-sw2] => (item={'interface': 'Ethernet2', 'enable': 'True'})
+
+PLAY RECAP ******************************************************************** 
+pynet-sw2                  : ok=3    changed=1    unreachable=0    failed=0   
+
+
+(applied_python)[hhbar@ip-172-30-0-38 classe6]$ ansible-playbook exercice_2_Arista_Int.yml --module-path ~/ANSIBLE/library/ 
+
+PLAY [Attach Arista Interface to Vlans] *************************************** 
+
+GATHERING FACTS *************************************************************** 
+ok: [pynet-sw2]
+
+TASK: [Configure Interfaces in Access mode and put them in aqequate VLAN] ***** 
+ok: [pynet-sw2] => (item={'interface': 'Ethernet7', 'vlan': 700})
+ok: [pynet-sw2] => (item={'interface': 'Ethernet2', 'vlan': 900})
+
+TASK: [Enable and Configure Interface Descrition] ***************************** 
+ok: [pynet-sw2] => (item={'interface': 'Ethernet7', 'enable': 'True'})
+changed: [pynet-sw2] => (item={'interface': 'Ethernet2', 'enable': 'True'})
+
+PLAY RECAP ******************************************************************** 
+pynet-sw2                  : ok=3    changed=1    unreachable=0    failed=0   
+
+(applied_python)[hhbar@ip-172-30-0-38 classe6]$ 
+
+
+
+
+
+
+
+
+
+
+vlan 500
+   name TEST_VLAN_500
+!
+vlan 700
+   name TEST_VLAN_700
+!
+vlan 900
+   name TEST_VLAN_900
+!
+interface Ethernet1
+   spanning-tree portfast
+!
+interface Ethernet2
+   description *** IN USE ***
+   switchport access vlan 900
+!
+interface Ethernet3
+!
+interface Ethernet4
+!
+interface Ethernet5
+!
+interface Ethernet6
+!
+interface Ethernet7
+   description *** IN USE ***
+   switchport access vlan 700
+
