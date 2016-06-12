@@ -1,0 +1,12 @@
+# Clone the repository that you just created on GitHub into your home directory in the lab environment.
+_________________________________________________________________________________________________________
+(applied_python)[hhbar@ip-172-30-0-38 ~]$ git clone https://github.com/HassanHbar/classe1
+Cloning into 'classe1'...
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+Checking connectivity... done
+________________________________________________________________________________________________________
+
+

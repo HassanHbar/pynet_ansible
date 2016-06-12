@@ -1,0 +1,30 @@
+pplied_python)[hhbar@ip-172-30-0-38 ~]$ mkdir SNMP
+(applied_python)[hhbar@ip-172-30-0-38 ~]$ cd SNMP/
+(applied_python)[hhbar@ip-172-30-0-38 SNMP]$ python
+Python 2.7.10 (default, Dec  8 2015, 18:25:23) 
+[GCC 4.8.3 20140911 (Red Hat 4.8.3-9)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import snmp_helper
+
+
+>>>
+
+
+
+
+
+(applied_python)[hhbar@ip-172-30-0-38 classe2]$ python exercice4.py
+========================================================
+pynet-rtr1.twb-tech.com
+=========================
+Cisco IOS Software, C880 Software (C880DATA-UNIVERSALK9-M), Version 15.4(2)T1, RELEASE SOFTWARE (fc3)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2014 by Cisco Systems, Inc.
+Compiled Thu 26-Jun-14 14:15 by prod_rel_team
+========================================================
+pynet-rtr2.twb-tech.com
+=========================
+Cisco IOS Software, C880 Software (C880DATA-UNIVERSALK9-M), Version 15.4(2)T1, RELEASE SOFTWARE (fc3)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2014 by Cisco Systems, Inc.
+Compiled Thu 26-Jun-14 14:15 by prod_rel_team 

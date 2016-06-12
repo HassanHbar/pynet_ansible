@@ -1,0 +1,120 @@
+pplied_python)[hhbar@ip-172-30-0-38 classe2]$ python exercice3.py 
+IP address: 50.76.53.27
+Password: 
+
+
+
+ 
+
+pynet-rtr1#term len 0
+pynet-rtr1#sh ip int brief
+Interface                  IP-Address      OK? Method Status                Protocol
+FastEthernet0              unassigned      YES unset  down                  down    
+FastEthernet1              unassigned      YES unset  down                  down    
+FastEthernet2              unassigned      YES unset  down                  down    
+FastEthernet3              unassigned      YES unset  down                  down    
+FastEthernet4              10.220.88.20    YES NVRAM  up                    up      
+Vlan1                      unassigned      YES unset  down                  down    
+pynet-rtr1#
+
+
+
+(applied_python)[hhbar@ip-172-30-0-38 classe2]$ pylint exercice3.py 
+No config file found, using default configuration
+************* Module exercice3
+C: 22, 0: Trailing whitespace (trailing-whitespace)
+C: 35, 0: Trailing whitespace (trailing-whitespace)
+C: 38, 0: Exactly one space required after assignment
+    output =  remote_conn.read_very_eager()
+           ^ (bad-whitespace)
+C:  1, 0: Missing module docstring (missing-docstring)
+
+
+Report
+======
+30 statements analysed.
+
+Statistics by type
+------------------
+
++---------+-------+-----------+-----------+------------+---------+
+|type     |number |old number |difference |%documented |%badname |
++=========+=======+===========+===========+============+=========+
+|module   |1      |NC         |NC         |0.00        |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|class    |0      |NC         |NC         |0           |0        |
++---------+-------+-----------+-----------+------------+---------+
+|method   |0      |NC         |NC         |0           |0        |
++---------+-------+-----------+-----------+------------+---------+
+|function |1      |NC         |NC         |100.00      |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+
+
+
+Raw metrics
+-----------
+
++----------+-------+------+---------+-----------+
+|type      |number |%     |previous |difference |
++==========+=======+======+=========+===========+
+|code      |31     |67.39 |NC       |NC         |
++----------+-------+------+---------+-----------+
+|docstring |4      |8.70  |NC       |NC         |
++----------+-------+------+---------+-----------+
+|comment   |1      |2.17  |NC       |NC         |
++----------+-------+------+---------+-----------+
+|empty     |10     |21.74 |NC       |NC         |
++----------+-------+------+---------+-----------+
+
+
+
+Duplication
+-----------
+
++-------------------------+------+---------+-----------+
+|                         |now   |previous |difference |
++=========================+======+=========+===========+
+|nb duplicated lines      |0     |NC       |NC         |
++-------------------------+------+---------+-----------+
+|percent duplicated lines |0.000 |NC       |NC         |
++-------------------------+------+---------+-----------+
+
+
+
+Messages by category
+--------------------
+
++-----------+-------+---------+-----------+
+|type       |number |previous |difference |
++===========+=======+=========+===========+
+|convention |4      |NC       |NC         |
++-----------+-------+---------+-----------+
+|refactor   |0      |NC       |NC         |
++-----------+-------+---------+-----------+
+|warning    |0      |NC       |NC         |
++-----------+-------+---------+-----------+
+|error      |0      |NC       |NC         |
++-----------+-------+---------+-----------+
+
+
+
+Messages
+--------
+
++--------------------+------------+
+|message id          |occurrences |
++====================+============+
+|trailing-whitespace |2           |
++--------------------+------------+
+|missing-docstring   |1           |
++--------------------+------------+
+|bad-whitespace      |1           |
++--------------------+------------+
+
+
+
+Global evaluation
+-----------------
+Your code has been rated at 8.67/10
+
+(applied_python)[hhbar@ip-172-30-0-38 classe2]$ 

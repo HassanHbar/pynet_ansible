@@ -1,0 +1,48 @@
+#Create a 'test' branch in your repository.
+    a. Switch between the 'master' branch and the 'test' branch.
+    b. Add a file to the 'test' branch.
+    c. Switch back to the 'master' branch.
+    d. Merge this 'test' branch into your 'master' branch.
+
+__________________________________________________________________________________________________
+a.________________________________________________________________________________________
+(applied_python)[hhbar@ip-172-30-0-38 classe1]$ git branch
+* master
+  test
+  
+  (applied_python)[hhbar@ip-172-30-0-38 classe1]$ git checkout test
+M       git_clone.txt
+Switched to branch 'test'
+(applied_python)[hhbar@ip-172-30-0-38 classe1]$ git branch
+  master
+* test
+(applied_python)[hhbar@ip-172-30-0-38 classe1]$ 
+____________________________________________________________________________________________
+b.________________________________________________________________________________________
+(applied_python)[hhbar@ip-172-30-0-38 classe1]$ git branch
+  master
+* test
+(applied_python)[hhbar@ip-172-30-0-38 classe1]$ git add bransh_test_file.txt
+(applied_python)[hhbar@ip-172-30-0-38 classe1]$ git add bransh_test_file.txt 
+(applied_python)[hhbar@ip-172-30-0-38 classe1]$ git commit -m " Brach test"
+[test 07fbc58]  Brach test
+ 1 file changed, 2 insertions(+)
+___________________________________________________________________________________________
+c.____________________________________________________________________________________
+(applied_python)[hhbar@ip-172-30-0-38 classe1]$ git checkout master
+M       git_clone.txt
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+(applied_python)[hhbar@ip-172-30-0-38 classe1]$ git branch
+* master
+  test
+(applied_python)[hhbar@ip-172-30-0-38 classe1]$ 
+________________________________________________________________________________________________
+d.____________________________________________________________________________________________
+(applied_python)[hhbar@ip-172-30-0-38 classe1]$ git merge test
+Updating 5546956..5cbba2c
+Fast-forward
+ bransh_test_file.txt | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+(applied_python)[hhbar@ip-172-30-0-38 classe1]$ 
+

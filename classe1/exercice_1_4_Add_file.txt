@@ -1,0 +1,44 @@
+#Add a file to the repository in the lab environment and then push it up to GitHub
+___________________________________________________________________________________
+
+(applied_python)[hhbar@ip-172-30-0-38 classe1]$ git add git_clone.txt 
+(applied_python)[hhbar@ip-172-30-0-38 classe1]$ git log
+commit e6abb5337c30e9406c25602b08228ca22d2b4a47
+Author: HassanHbar <hassanhbar@gmail.com>
+Date:   Thu Apr 14 17:01:08 2016 +0400
+
+    Initial commit
+
+
+
+(applied_python)[hhbar@ip-172-30-0-38 classe1]$ git commit -m " this is Git Exercice"
+[master a5450e7]  this is Git Exercice
+ 1 file changed, 8 insertions(+)
+ create mode 100644 git_clone.txt
+(applied_python)[hhbar@ip-172-30-0-38 classe1]$ git log
+commit a5450e75a25b58b589bdb06a83d944537ddd2b87
+Author: Hassan HBAR <Hassanhbar@gmail.com>
+Date:   Sun Apr 17 00:28:18 2016 -0700
+
+     this is Git Exercice
+
+commit e6abb5337c30e9406c25602b08228ca22d2b4a47
+Author: HassanHbar <hassanhbar@gmail.com>
+Date:   Thu Apr 14 17:01:08 2016 +0400
+
+    Initial commit
+
+___________________________________________________________________________________________________
+__________________________Push up to GitHub______________________________________________________
+
+(applied_python)[hhbar@ip-172-30-0-38 classe1]$ 
+(applied_python)[hhbar@ip-172-30-0-38 classe1]$ git push origin master
+Username for 'https://github.com': hassanhbar
+Password for 'https://hassanhbar@github.com': 
+Counting objects: 3, done.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 496 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/HassanHbar/classe1
+   e6abb53..a5450e7  master -> master
+(applied_python)[hhbar@ip-172-30-0-38 classe1]$ 
