@@ -1,0 +1,71 @@
+
+ANSIBLE_KEEP_REMOTE_FILES=1 ansible-playbook class7_ex3.yml --module-path /home/hhbar/pynet_ansible/classe7 -vvv
+
+PLAY [Create Arista Vlans] **************************************************** 
+
+GATHERING FACTS *************************************************************** 
+<pynet-sw2> REMOTE_MODULE setup
+<pynet-sw2> EXEC ['/bin/sh', '-c', 'mkdir -p $HOME/.ansible/tmp/ansible-tmp-1466251034.65-144686482250209 && chmod a+rx $HOME/.ansible/tmp/ansible-tmp-1466251034.65-144686482250209 && echo $HOME/.ansible/tmp/ansible-tmp-1466251034.65-144686482250209']
+<pynet-sw2> PUT /tmp/tmpboxI6b TO /home/hhbar/.ansible/tmp/ansible-tmp-1466251034.65-144686482250209/setup
+<pynet-sw2> EXEC ['/bin/sh', '-c', u'LANG=en_US.UTF-8 LC_CTYPE=en_US.UTF-8 ~/applied_python/bin/python /home/hhbar/.ansible/tmp/ansible-tmp-1466251034.65-144686482250209/setup']
+ok: [pynet-sw2]
+
+TASK: [Create Vlan 850] ******************************************************* 
+<pynet-sw2> REMOTE_MODULE ex3_ansible_vlan switch="pynet-sw2" vlanid=850 name=V_T_850
+<pynet-sw2> EXEC ['/bin/sh', '-c', 'mkdir -p $HOME/.ansible/tmp/ansible-tmp-1466251034.76-196326192347429 && chmod a+rx $HOME/.ansible/tmp/ansible-tmp-1466251034.76-196326192347429 && echo $HOME/.ansible/tmp/ansible-tmp-1466251034.76-196326192347429']
+<pynet-sw2> PUT /tmp/tmp7Hh2An TO /home/hhbar/.ansible/tmp/ansible-tmp-1466251034.76-196326192347429/ex3_ansible_vlan
+<pynet-sw2> EXEC ['/bin/sh', '-c', u'LANG=en_US.UTF-8 LC_CTYPE=en_US.UTF-8 /usr/bin/env python /home/hhbar/.ansible/tmp/ansible-tmp-1466251034.76-196326192347429/ex3_ansible_vlan']
+changed: [pynet-sw2] => {"changed": true, "msg": "VLAN already exists, setting VLAN name"}
+
+PLAY RECAP ******************************************************************** 
+pynet-sw2                  : ok=2    changed=1    unreachable=0    failed=0   
+
+(applied_python)[hhbar@ip-172-30-0-38 classe7]$ 
+(applied_python)[hhbar@ip-172-30-0-38 classe7]$ 
+pynet-sw2#sh vlan
+VLAN  Name                             Status    Ports
+----- -------------------------------- --------- -------------------------------
+1     default                          active    Cpu, Et1, Et3, Et4, Et5, Et6
+226   black                            active   
+255   red                              active   
+500   VLAN0500                         active   
+600   VLAN0600                         active   
+800   V_800                            active   
+850   V_T_850                          active   
+900   T_V_900                          active   
+GATHERING FACTS *************************************************************** 
+<pynet-sw2> REMOTE_MODULE setup
+<pynet-sw2> EXEC ['/bin/sh', '-c', 'mkdir -p $HOME/.ansible/tmp/ansible-tmp-1466250922.16-217673771093859 && chmod a+rx $HOME/.ansible/tmp/ansible-tmp-1466250922.16-217673771093859 && echo $HOME/.ansible/tmp/ansible-tmp-1466250922.16-217673771093859']
+<pynet-sw2> PUT /tmp/tmpvT4qnl TO /home/hhbar/.ansible/tmp/ansible-tmp-1466250922.16-217673771093859/setup
+<pynet-sw2> EXEC ['/bin/sh', '-c', u'LANG=en_US.UTF-8 LC_CTYPE=en_US.UTF-8 ~/applied_python/bin/python /home/hhbar/.ansible/tmp/ansible-tmp-1466250922.16-217673771093859/setup']
+ok: [pynet-sw2]
+
+TASK: [Create Vlan 850] ******************************************************* 
+<pynet-sw2> REMOTE_MODULE ex3_ansible_vlan switch="pynet-sw2" vlanid=850 name=V_850
+<pynet-sw2> EXEC ['/bin/sh', '-c', 'mkdir -p $HOME/.ansible/tmp/ansible-tmp-1466250922.28-202931417257189 && chmod a+rx $HOME/.ansible/tmp/ansible-tmp-1466250922.28-202931417257189 && echo $HOME/.ansible/tmp/ansible-tmp-1466250922.28-202931417257189']
+<pynet-sw2> PUT /tmp/tmpdLRjLx TO /home/hhbar/.ansible/tmp/ansible-tmp-1466250922.28-202931417257189/ex3_ansible_vlan
+<pynet-sw2> EXEC ['/bin/sh', '-c', u'LANG=en_US.UTF-8 LC_CTYPE=en_US.UTF-8 /usr/bin/env python /home/hhbar/.ansible/tmp/ansible-tmp-1466250922.28-202931417257189/ex3_ansible_vlan']
+changed: [pynet-sw2] => {"changed": true, "msg": "Adding VLAN including vlan_name (if present)"}
+PLAY RECAP ******************************************************************** 
+pynet-sw2                  : ok=2    changed=1    unreachable=0    failed=0   
+(applied_python)[hhbar@ip-172-30-0-38 classe7]$ ANSIBLE_KEEP_REMOTE_FILES=1 ansible-playbook class7_ex3.yml --module-path /home/hhbar/pynet_ansible/classe7 -vvv
+
+PLAY [Create Arista Vlans] **************************************************** 
+
+GATHERING FACTS *************************************************************** 
+<pynet-sw2> REMOTE_MODULE setup
+<pynet-sw2> EXEC ['/bin/sh', '-c', 'mkdir -p $HOME/.ansible/tmp/ansible-tmp-1466250942.57-163785876703677 && chmod a+rx $HOME/.ansible/tmp/ansible-tmp-1466250942.57-163785876703677 && echo $HOME/.ansible/tmp/ansible-tmp-1466250942.57-163785876703677']
+<pynet-sw2> PUT /tmp/tmpNcB8XT TO /home/hhbar/.ansible/tmp/ansible-tmp-1466250942.57-163785876703677/setup
+<pynet-sw2> EXEC ['/bin/sh', '-c', u'LANG=en_US.UTF-8 LC_CTYPE=en_US.UTF-8 ~/applied_python/bin/python /home/hhbar/.ansible/tmp/ansible-tmp-1466250942.57-163785876703677/setup']
+ok: [pynet-sw2]
+
+TASK: [Create Vlan 850] ******************************************************* 
+<pynet-sw2> REMOTE_MODULE ex3_ansible_vlan switch="pynet-sw2" vlanid=850 name=V_850
+<pynet-sw2> EXEC ['/bin/sh', '-c', 'mkdir -p $HOME/.ansible/tmp/ansible-tmp-1466250942.69-6971479854262 && chmod a+rx $HOME/.ansible/tmp/ansible-tmp-1466250942.69-6971479854262 && echo $HOME/.ansible/tmp/ansible-tmp-1466250942.69-6971479854262']
+<pynet-sw2> PUT /tmp/tmpyfXPZU TO /home/hhbar/.ansible/tmp/ansible-tmp-1466250942.69-6971479854262/ex3_ansible_vlan
+<pynet-sw2> EXEC ['/bin/sh', '-c', u'LANG=en_US.UTF-8 LC_CTYPE=en_US.UTF-8 /usr/bin/env python /home/hhbar/.ansible/tmp/ansible-tmp-1466250942.69-6971479854262/ex3_ansible_vlan']
+changed: [pynet-sw2] => {"changed": true, "msg": "VLAN already exists, setting VLAN name"}
+
+PLAY RECAP ******************************************************************** 
+pynet-sw2                  : ok=2    changed=1    unreachable=0    failed=0   
+

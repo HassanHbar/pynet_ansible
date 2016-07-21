@@ -1,0 +1,11 @@
+
+
+
+(applied_python)[hhbar@ip-172-30-0-38 pynet_ansible]$ python exercice_2_vendor.py 
+pynet-rtr1 Cisco
+pynet-rtr2 Cisco
+pynet-sw1 Arista
+pynet-sw2 Arista
+pynet-sw3 Arista
+pynet-sw4 Arista
+juniper-srx Juniper

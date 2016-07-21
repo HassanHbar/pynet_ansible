@@ -1,0 +1,10 @@
+---
+
+- name:  Create Arista Vlans
+  hosts: arista
+  gather_facts: yes
+
+  tasks:
+    - name: Create Vlan 850
+      ex3_ansible_vlan: switch="pynet-sw2" vlanid=860 name=
+            

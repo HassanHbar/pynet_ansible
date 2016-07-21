@@ -1,0 +1,20 @@
+
+(applied_python)[hhbar@ip-172-30-0-38 pynet_ansible]$ python exercice_3_add_device.py 
+pynet-rtr1 pyclass 184.105.247.70 Cisco
+pynet-rtr2 pyclass 184.105.247.71 Cisco
+pynet-sw1 admin1 184.105.247.72 Arista
+pynet-sw2 admin1 184.105.247.73 Arista
+pynet-sw3 admin1 184.105.247.74 Arista
+pynet-sw4 admin1 184.105.247.75 Arista
+juniper-srx pyclass 184.105.247.76 Juniper
+pynet-test-rtr1 pyclass 184.105.247.77 Cisco
+pynet-test-sw5 admin1 184.105.247.78 Arista
+(applied_python)[hhbar@ip-172-30-0-38 pynet_ansible]$ 
+
+
+
+
+
+
+
+
