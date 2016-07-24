@@ -1,0 +1,32 @@
+
+(applied_python)[hhbar@ip-172-30-0-38 exercice2]$ ls -la
+total 12
+drwxrwxr-x 3 hhbar hhbar 4096 Jul 24 05:55 .
+drwxrwxr-x 4 hhbar hhbar 4096 Jul 24 05:52 ..
+drwxrwxr-x 2 hhbar hhbar 4096 Jul 24 05:59 mytest
+(applied_python)[hhbar@ip-172-30-0-38 exercice2]$ touch exercice2_verif.txt
+(applied_python)[hhbar@ip-172-30-0-38 exercice2]$ python
+Python 2.7.10 (default, Jul 20 2016, 20:53:27) 
+[GCC 4.8.3 20140911 (Red Hat 4.8.3-9)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import mytest
+>>> mytest.func1()
+Hello World
+>>> mytest.func2()
+Hello Simple
+>>> mytest.func3()
+Hello Whatever
+>>> 
+>>> 
+>>> 
+>>> from mytest import func1, func2, func3
+>>> func1()
+Hello World
+>>> func2()
+Hello Simple
+>>> func3()
+Hello Whatever
+>>> 
+>>> quit()
+(applied_python)[hhbar@ip-172-30-0-38 exercice2]$
+

@@ -1,0 +1,31 @@
+(applied_python)[hhbar@ip-172-30-0-38 exercice9]$ python exercice9_script.py 
+ function 1 display: 
+
+Hello World
+
+
+ function 2 display: 
+
+Hello Simple
+
+
+ function 3 display: 
+
+Hello Whatever
+
+
+ MyClass  display: 
+
+
+
+
+
+
+
+Hello World: January 2 Mach
+
+
+NOT Hello World: January 2 Mach
+
+
+(applied_python)[hhbar@ip-172-30-0-38 exercice9]$

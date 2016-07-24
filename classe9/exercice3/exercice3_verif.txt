@@ -1,0 +1,24 @@
+(applied_python)[hhbar@ip-172-30-0-38 mytest]$ ls -la
+total 24
+drwxrwxr-x 2 hhbar hhbar 4096 Jul 24 06:12 .
+drwxrwxr-x 3 hhbar hhbar 4096 Jul 24 06:06 ..
+-rw-rw-r-- 1 hhbar hhbar  139 Jul 24 06:12 __init__.py
+-rw-rw-r-- 1 hhbar hhbar  137 Jul 24 06:06 simple.py
+-rw-rw-r-- 1 hhbar hhbar  141 Jul 24 06:06 whatever.py
+-rw-rw-r-- 1 hhbar hhbar  136 Jul 24 06:06 world.py
+(applied_python)[hhbar@ip-172-30-0-38 mytest]$ cd ..
+
+
+(applied_python)[hhbar@ip-172-30-0-38 exercice3]$ python
+Python 2.7.10 (default, Jul 20 2016, 20:53:27) 
+[GCC 4.8.3 20140911 (Red Hat 4.8.3-9)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from mytest import *
+>>> func1()
+Hello World
+>>> func2()
+Hello Simple
+>>> func3()
+Hello Whatever
+>>> quit()
+(applied_python)[hhbar@ip-172-30-0-38 exercice3]$i

@@ -1,0 +1,22 @@
+(applied_python)[hhbar@ip-172-30-0-38 mytest]$ python
+Python 2.7.10 (default, Jul 20 2016, 20:53:27) 
+[GCC 4.8.3 20140911 (Red Hat 4.8.3-9)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import world
+>>> my_obj = world.MyClass('SF', 'NYC', 'LA')
+>>> print my_obj.x, my_obj.y, my_obj.z
+SF NYC LA
+>>> my_obj.hello()
+Hello World: SF NYC LA
+>>> my_obj.not_hello()
+NOT Hello World: SF NYC LA
+>>> new_obj = world.MyChildClass('X', 'Y', 'Z')
+doing something additional in the __init__() method
+>>> print my_obj.x, my_obj.y, my_obj.z
+SF NYC LA
+>>> new_obj.hello()
+This Class overide Hello orld Class: X Y Z
+>>> new_obj.not_hello()
+NOT Hello World: X Y Z
+>>> quit()
+(applied_python)[hhbar@ip-172-30-0-38 mytest]$ 

@@ -1,0 +1,30 @@
+(applied_python)[hhbar@ip-172-30-0-38 exercice1]$ pwd
+/home/hhbar/pynet_ansible/classe9/exercice1
+(applied_python)[hhbar@ip-172-30-0-38 exercice1]$ ls -la ./mytest
+total 20
+drwxrwxr-x 2 hhbar hhbar 4096 Jul 24 05:23 .
+drwxrwxr-x 3 hhbar hhbar 4096 Jul 24 05:31 ..
+-rw-rw-r-- 1 hhbar hhbar  137 Jul 24 05:16 simple.py
+-rw-rw-r-- 1 hhbar hhbar  141 Jul 24 05:16 whatever.py
+-rw-rw-r-- 1 hhbar hhbar  136 Jul 24 05:23 world.py
+(applied_python)[hhbar@ip-172-30-0-38 exercice1]$ python
+Python 2.7.10 (default, Jul 20 2016, 20:53:27) 
+[GCC 4.8.3 20140911 (Red Hat 4.8.3-9)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import mytest
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ImportError: No module named mytest
+>>> import mytest.simple
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ImportError: No module named mytest.simple
+>>> import mytest.whatever
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ImportError: No module named mytest.whatever
+>>> import mytest.world
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ImportError: No module named mytest.world
+>>> quit()

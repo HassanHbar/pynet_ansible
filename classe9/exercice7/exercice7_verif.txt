@@ -1,0 +1,41 @@
+
+(applied_python)[hhbar@ip-172-30-0-38 exercice7]$ ls -la
+total 12
+drwxrwxr-x 3 hhbar hhbar 4096 Jul 24 13:56 .
+drwxrwxr-x 9 hhbar hhbar 4096 Jul 24 13:55 ..
+drwxrwxr-x 2 hhbar hhbar 4096 Jul 24 13:57 mytest
+(applied_python)[hhbar@ip-172-30-0-38 exercice7]$ pwd
+/home/hhbar/pynet_ansible/classe9/exercice7
+(applied_python)[hhbar@ip-172-30-0-38 exercice7]$ env | grep PYTH
+PYTHONPATH=/home/hhbar/DJANGOX/djproject/
+(applied_python)[hhbar@ip-172-30-0-38 exercice7]$ export PYTHONPATH=$PYTHONPATH:/home/hhbar/pynet_ansible/classe9/exercice7
+(applied_python)[hhbar@ip-172-30-0-38 exercice7]$ env | grep PYTH
+PYTHONPATH=/home/hhbar/DJANGOX/djproject/:/home/hhbar/pynet_ansible/classe9/exercice7
+(applied_python)[hhbar@ip-172-30-0-38 exercice7]$ cd ~
+(applied_python)[hhbar@ip-172-30-0-38 ~]$ 
+(applied_python)[hhbar@ip-172-30-0-38 ~]$ python
+Python 2.7.10 (default, Jul 20 2016, 20:53:27) 
+[GCC 4.8.3 20140911 (Red Hat 4.8.3-9)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import sys
+>>> sys.path
+['', '/home/hhbar/DJANGOX/djproject', '/home/hhbar/pynet_ansible/classe9/exercice7', '/home/hhbar/applied_python/local/lib64/python2.7/site-packages', '/home/hhbar/applied_python/local/lib/python2.7/site-packages', '/home/hhbar/applied_python/lib64/python2.7', '/home/hhbar/applied_python/lib/python2.7', '/home/hhbar/applied_python/lib64/python2.7/site-packages', '/home/hhbar/applied_python/lib/python2.7/site-packages', '/home/hhbar/applied_python/lib64/python2.7/lib-dynload', '/usr/lib64/python2.7', '/usr/lib/python2.7']
+>>> from pprint import pprint
+>>> pprint(sys.path)
+['',
+ '/home/hhbar/DJANGOX/djproject',
+ '/home/hhbar/pynet_ansible/classe9/exercice7',
+ '/home/hhbar/applied_python/local/lib64/python2.7/site-packages',
+ '/home/hhbar/applied_python/local/lib/python2.7/site-packages',
+ '/home/hhbar/applied_python/lib64/python2.7',
+ '/home/hhbar/applied_python/lib/python2.7',
+ '/home/hhbar/applied_python/lib64/python2.7/site-packages',
+ '/home/hhbar/applied_python/lib/python2.7/site-packages',
+ '/home/hhbar/applied_python/lib64/python2.7/lib-dynload',
+ '/usr/lib64/python2.7',
+ '/usr/lib/python2.7']
+>>> import mytest
+>>> mytest.__file__
+'/home/hhbar/pynet_ansible/classe9/exercice7/mytest/__init__.py'
+>>> quit()
+(applied_python)[hhbar@ip-172-30-0-38 ~]$ 
