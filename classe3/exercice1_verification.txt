@@ -1,0 +1,62 @@
+1) First execution
+(applied_python)[hhbar@ip-172-30-0-38 classe3]$ python exercice1.py 
+0 devices were previously saved
+
+
+Connected to device = pynet-rtr1.twb-tech.com
+Last changed timestamp = 330885830
+Uptime = 352110772
+pynet-rtr1.twb-tech.com ............ saving new device
+
+Connected to device = pynet-rtr2.twb-tech.com
+Last changed timestamp = 222533192
+Uptime = 222547600
+pynet-rtr2.twb-tech.com ............ saving new device
+
+2) Second execution
+
+
+(applied_python)[hhbar@ip-172-30-0-38 classe3]$ python exercice1.py 
+2 devices were previously saved
+
+
+Connected to device = pynet-rtr1.twb-tech.com
+Last changed timestamp = 330885830
+Uptime = 352124392
+pynet-rtr1.twb-tech.com ............ not changed
+
+Connected to device = pynet-rtr2.twb-tech.com
+Last changed timestamp = 222533192
+Uptime = 222561224
+pynet-rtr2.twb-tech.com ............ not changed
+(applied_python)[hhbar@ip-172-30-0-38 classe3]$
+
+3) Third execution(change is happening)
+(applied_python)[hhbar@ip-172-30-0-38 classe3]$ python exercice1.py 
+2 devices were previously saved
+
+
+Connected to device = pynet-rtr1.twb-tech.com
+Last changed timestamp = 330885830
+Uptime = 352896837
+pynet-rtr1.twb-tech.com ............ not changed
+
+Connected to device = pynet-rtr2.twb-tech.com
+Last changed timestamp = 223253157
+Uptime = 223333666
+pynet-rtr2.twb-tech.com ............ CHANGED
+(applied_python)[hhbar@ip-172-30-0-38 classe3]$ python exercice1.py 
+2 devices were previously saved
+
+
+Connected to device = pynet-rtr1.twb-tech.com
+Last changed timestamp = 330885830
+Uptime = 352902099
+pynet-rtr1.twb-tech.com ............ not changed
+
+Connected to device = pynet-rtr2.twb-tech.com
+Last changed timestamp = 223253157
+Uptime = 223338922
+pynet-rtr2.twb-tech.com ............ not changed
+(applied_python)[hhbar@ip-172-30-0-38 classe3]$
+
