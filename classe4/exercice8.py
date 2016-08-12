@@ -6,38 +6,58 @@ logging buffered <size>
 no logging console
 '''
 
-from getpass import getpass
 from netmiko import ConnectHandler
-from test_devices import pynet1, pynet2, juniper_srx
+from datetime import datetime
+
+pynet1 = {
+    'device_type': 'cisco_ios',
+    'username': 'pyclass',
+    'ip': '184.105.247.70',
+    'password': '88newclass',
+    'verbose': 'False'
+}
+
+pynet2 = {
+    'device_type': 'cisco_ios',
+    'username': 'pyclass',
+    'secret': '',
+    'ip': '184.105.247.71',
+    'password': '88newclass',
+    'verbose': 'False'
+}
 
 def main():
     '''
     Use Netmiko to change the logging buffer size and to disable console logging
     from a file for both pynet-rtr1 and pynet-rtr2
     '''
-    ip_addr = raw_input("Enter IP address: ")
-    password = getpass()
 
-    # Get connection parameters setup correctly
-    for a_dict in (pynet1, pynet2, juniper_srx):
-        a_dict['ip'] = ip_addr
-        a_dict['password'] = password
-        a_dict['verbose'] = False
+    start_time = datetime.now()
 
     for a_device in (pynet1, pynet2):
         net_connect = ConnectHandler(**a_device)
-        net_connect.send_config_from_file(config_file='config_file.txt')
-
-        # Verify configuration
+        print
+        print "Device: {} ========> {}".format(net_connect.find_prompt(),\
+        net_connect.ip)
         output = net_connect.send_command("show run | inc logging")
         print
-        print '#' * 80
-        print "Device: {} ========> {}:{}".format(net_connect.find_prompt(),\
-net_connect.ip, net_connect.port)
+        print "Configuration of {} before applying the file Config is :".\
+        format(net_connect.find_prompt())
+        print output
+        print
+        print '*'*80
+        net_connect.send_config_from_file(config_file='config_file.txt')
+        output = net_connect.send_command("show run | inc logging")
+        print "Configuration of {} after applying the file Config is: ".\
+        format(net_connect.find_prompt())
         print
         print output
-        print '#' * 80
-        print
-
+        print '='*80
+        print '='*80
+    print "\n"*2
+    elapsed_time = datetime.now() - start_time
+    print "Elapsed time :   {}".format(elapsed_time)
+    print "\n"*2
+    
 if __name__ == "__main__":
     main()

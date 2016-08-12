@@ -63,7 +63,7 @@ def main():
         "in_ucast_pkts": [],
         "out_ucast_pkts": [],
     }
-    for tim in range(0, 60, 5):
+    for tim in range(0, 65, 5):
         for oid in ("in_octets", "out_octets", "in_ucast_pkts", "out_ucast_pkts"):
             snmp_retrieved_count = get_interface_stats(OID_DICT[oid])
             stats[oid].append(snmp_retrieved_count)
