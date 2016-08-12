@@ -1,62 +1,69 @@
-1) First execution
+(applied_python)[hhbar@ip-172-30-0-38 classe3]$ rm netdev.pkl
 (applied_python)[hhbar@ip-172-30-0-38 classe3]$ python exercice1.py 
-0 devices were previously saved
-
 
 Connected to device = pynet-rtr1.twb-tech.com
-Last changed timestamp = 330885830
-Uptime = 352110772
+Last changed timestamp = 431598607
+Uptime = 432223124
 pynet-rtr1.twb-tech.com ............ saving new device
 
 Connected to device = pynet-rtr2.twb-tech.com
-Last changed timestamp = 222533192
-Uptime = 222547600
+Last changed timestamp = 302630287
+Uptime = 302659876
 pynet-rtr2.twb-tech.com ............ saving new device
-
-2) Second execution
-
-
+(applied_python)[hhbar@ip-172-30-0-38 classe3]$ 
 (applied_python)[hhbar@ip-172-30-0-38 classe3]$ python exercice1.py 
-2 devices were previously saved
-
 
 Connected to device = pynet-rtr1.twb-tech.com
-Last changed timestamp = 330885830
-Uptime = 352124392
+Last changed timestamp = 431598607
+Uptime = 432224569
 pynet-rtr1.twb-tech.com ............ not changed
 
 Connected to device = pynet-rtr2.twb-tech.com
-Last changed timestamp = 222533192
-Uptime = 222561224
+Last changed timestamp = 302630287
+Uptime = 302661310
 pynet-rtr2.twb-tech.com ............ not changed
-(applied_python)[hhbar@ip-172-30-0-38 classe3]$
-
-3) Third execution(change is happening)
 (applied_python)[hhbar@ip-172-30-0-38 classe3]$ python exercice1.py 
-2 devices were previously saved
-
 
 Connected to device = pynet-rtr1.twb-tech.com
-Last changed timestamp = 330885830
-Uptime = 352896837
+Last changed timestamp = 431598607
+Uptime = 432241982
 pynet-rtr1.twb-tech.com ............ not changed
 
 Connected to device = pynet-rtr2.twb-tech.com
-Last changed timestamp = 223253157
-Uptime = 223333666
-pynet-rtr2.twb-tech.com ............ CHANGED
-(applied_python)[hhbar@ip-172-30-0-38 classe3]$ python exercice1.py 
-2 devices were previously saved
-
-
-Connected to device = pynet-rtr1.twb-tech.com
-Last changed timestamp = 330885830
-Uptime = 352902099
-pynet-rtr1.twb-tech.com ............ not changed
-
-Connected to device = pynet-rtr2.twb-tech.com
-Last changed timestamp = 223253157
-Uptime = 223338922
+Last changed timestamp = 302630287
+Uptime = 302678724
 pynet-rtr2.twb-tech.com ............ not changed
-(applied_python)[hhbar@ip-172-30-0-38 classe3]$
+(applied_python)[hhbar@ip-172-30-0-38 classe3]$ python exercice1.py 
 
+Connected to device = pynet-rtr1.twb-tech.com
+Last changed timestamp = 431598607
+Uptime = 432253739
+pynet-rtr1.twb-tech.com ............ not changed
+
+Connected to device = pynet-rtr2.twb-tech.com
+Last changed timestamp = 302630287
+Uptime = 302690481
+pynet-rtr2.twb-tech.com ............ not changed
+(applied_python)[hhbar@ip-172-30-0-38 classe3]$ python exercice1.py 
+
+Connected to device = pynet-rtr1.twb-tech.com
+Last changed timestamp = 431598607
+Uptime = 432278334
+pynet-rtr1.twb-tech.com ............ not changed
+
+Connected to device = pynet-rtr2.twb-tech.com
+Last changed timestamp = 302630287
+Uptime = 302715076
+pynet-rtr2.twb-tech.com ............ not changed
+(applied_python)[hhbar@ip-172-30-0-38 classe3]$ python exercice1.py 
+
+Connected to device = pynet-rtr1.twb-tech.com
+Last changed timestamp = 431598607
+Uptime = 432315652
+pynet-rtr1.twb-tech.com ............ not changed
+
+Connected to device = pynet-rtr2.twb-tech.com
+Last changed timestamp = 302720236
+Uptime = 302752394
+pynet-rtr2.twb-tech.com ............ CHANGED,  email notification is sent
+(applied_python)[hhbar@ip-172-30-0-38 classe3]$

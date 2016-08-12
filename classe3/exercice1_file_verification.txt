@@ -1,0 +1,44 @@
+(applied_python)[hhbar@ip-172-30-0-38 classe3]$ python exercice1_file_support.py 
+0 devices were previously saved
+
+
+Connected to device = pynet-rtr1.twb-tech.com
+Last changed timestamp = 434791066
+Uptime = 438094128
+pynet-rtr1.twb-tech.com ............ saving new device
+
+Connected to device = pynet-rtr2.twb-tech.com
+Last changed timestamp = 308480120
+Uptime = 308530934
+pynet-rtr2.twb-tech.com ............ saving new device
+
+(applied_python)[hhbar@ip-172-30-0-38 classe3]$ python exercice1_file_support.py 
+2 devices were previously saved
+
+
+Connected to device = pynet-rtr1.twb-tech.com
+Last changed timestamp = 434791066
+Uptime = 438073590
+pynet-rtr1.twb-tech.com Already Saved ............ not changed
+
+Connected to device = pynet-rtr2.twb-tech.com
+Last changed timestamp = 308480120
+Uptime = 308510392
+pynet-rtr2.twb-tech.com Already Saved ............ not changed
+
+
+(applied_python)[hhbar@ip-172-30-0-38 classe3]$ python exercice1_file_support.py 
+2 devices were previously saved
+
+
+Connected to device = pynet-rtr1.twb-tech.com
+Last changed timestamp = 434791066
+Uptime = 437879700
+pynet-rtr1.twb-tech.com Already Saved ............ CHANGED,  email notification is sent
+
+Connected to device = pynet-rtr2.twb-tech.com
+Last changed timestamp = 308300085
+Uptime = 308316505
+pynet-rtr2.twb-tech.com Already Saved ............ CHANGED,  email notification is sent
+(applied_python)[hhbar@ip-172-30-0-38 classe3]$ python exercice1_file_support.py 
+2 devices were previously saved

@@ -1,0 +1,8 @@
+!!python/unicode 'pynet-rtr1.twb-tech.com':
+  device_name: !!python/unicode 'pynet-rtr1.twb-tech.com'
+  last_changed: 391152500
+  uptime: 394817291
+!!python/unicode 'pynet-rtr2.twb-tech.com':
+  device_name: !!python/unicode 'pynet-rtr2.twb-tech.com'
+  last_changed: 265191480
+  uptime: 265254102
