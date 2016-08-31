@@ -8,40 +8,39 @@ PASSWORD = getpass()
 
 PYNET2 = {
     'device_type': 'cisco_ios',
-    'ip': '50.76.53.27',
+    'ip': '184.105.247.71',
     'username': 'pyclass',
     'password': PASSWORD,
-    'port': 8022,
     }
 
 
 
-def command(rtr, cmd):
+def send_command(rtr, cmd, config=0):
+
     """
     Send command down in the chanel
     """
-    cmd = cmd.strip()
-    outp = rtr.send_command(cmd)
-    return rtr.find_prompt() + "\n" + outp + "\n"
+    output = "\n" + "*"*80 + "\n"
+    output += ''' Outputs in device "{0}" for the command\
+    "{1}" is : \n'''.format(rtr.find_prompt(), cmd)
+    output += "*"*80 + "\n"
+    if config == 1:
+        configs = []
+        configs.append(cmd)
+        output += rtr.send_config_set(configs)
+    else:
+        output += rtr.send_command(cmd)
+    output += "\n" + "#"*80
+    return output
 
-def config(rtr, cmd):
-    """
-    Send config command down in the chanel
-    """
-    cmd = cmd.strip()
-    config_command = [cmd]
-    outp = rtr.send_config_set(config_command)
-    return rtr.find_prompt() + "\n" + outp + "\n"
 
 def main():
     """
-    Use Netmiko to execute 'show arp' on pynet-rtr1, pynet-rtr2, and juniper-srx.
+    Use Netmiko to execute 'show arp' on pynet-rtr2.
     """
     pynet_rtr2 = ConnectHandler(**PYNET2)
-    output = config(pynet_rtr2, "logging buffered 16000")
-    print output
-    output = command(pynet_rtr2, " sh runn | in logging")
-    print output
+    print send_command(pynet_rtr2, "logging buffered 16000", 1)
+    print send_command(pynet_rtr2, " sh runn | in logging")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,83 @@
+before running Python script
+=====================================
+(applied_python)[hhbar@ip-172-30-0-38 classe10]$ ssh -l pyclass 184.105.247.76 
+pyclass@184.105.247.76's password: 
+--- JUNOS 12.1X44-D35.5 built 2014-05-19 21:36:43 UTC
+pyclass@pynet-jnpr-srx1> 
+pyclass@pynet-jnpr-srx1> configure 
+Entering configuration mode
+
+[edit]
+pyclass@pynet-jnpr-srx1# show | compare 
+
+[edit]
+pyclass@pynet-jnpr-srx1#
+
+======================================
+after running the script
+============================
+pyclass@pynet-jnpr-srx1> configure 
+Entering configuration mode
+Users currently editing the configuration:
+  pyclass (pid 38301) on since 2016-08-21 15:45:44 EDT
+      exclusive
+
+# commit confirmed will be rolled back in 1 minute
+[edit]
+pyclass@pytest# 
+
+# commit confirmed will be rolled back in 1 minute
+[edit]
+pyclass@pytest# exit 
+Exiting configuration mode
++++++++
+pyclass@pytest> show system commit 
+0   2016-08-21 15:39:20 EDT by pyclass via netconf commit confirmed, rollback in 1mins
+    Testing commit-confirm
+1   2016-08-21 15:36:24 EDT by root via other
+2   2016-08-21 15:34:58 EDT by pyclass via netconf commit confirmed, rollback in 1mins
+    Testing commit-confirm
+3   2016-08-21 00:11:12 EDT by root via other
+4   2016-08-21 00:09:47 EDT by pyclass via netconf commit confirmed, rollback in 1mins
+    Testing commit-confirm
+5   2016-08-20 22:58:18 EDT by pyclass via netconf
+++++++
+
+# commit confirmed will be rolled back in 1 minute
+pyclass@pytest> configure 
+Entering configuration mode
+
+# commit confirmed will be rolled back in 1 minute
+[edit]
+pyclass@pytest# 
+
+[edit]
+pyclass@pytest# 
+
+[edit]
+                                                                               
+Broadcast Message from root@pynet-jnpr-srx1                                    
+        (no tty) at 15:36 EDT...                                               
+                                                                               
+Commit was not confirmed; automatic rollback complete.                                                                               
+
+
+[edit]
+pyclass@pynet-jnpr-srx1#
+========================================
+outputs from the script
+========================================
+(applied_python)[hhbar@ip-172-30-0-38 classe10]$ python exercice4_1.py
+Password: 
+Enter Juniper SRX IP"(184.105.247.76)": 184.105.247.76
+
+[edit system]
+-  host-name pynet-jnpr-srx1;
++  host-name pytest;
+
+
+
+
+
+(applied_python)[hhbar@ip-172-30-0-38 classe10]$ 
+

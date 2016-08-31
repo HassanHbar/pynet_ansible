@@ -16,7 +16,7 @@ def disable_paging(ssh, cmd='ter len 0'):
     cmd = cmd.strip()
     ssh.send(cmd + '\n')
     time.sleep(1)
- 
+
 def send_command(ssh, cmd=''):
     """
     Send command down the channel
@@ -36,7 +36,8 @@ def main():
     username = "pyclass"
     password = getpass()
     port = 8022
-    remote_conn.connect(ip_addr, username=username, password=password, allow_agent=False, look_for_keys=False, port=port)
+    remote_conn.connect(ip_addr, username=username, password=password,\
+    allow_agent=False, look_for_keys=False, port=port)
     ssh = remote_conn.invoke_shell()
     time.sleep(1)
     disable_paging(ssh)
