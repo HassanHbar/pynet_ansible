@@ -1,0 +1,22 @@
+(applied_python)[hhbar@ip-172-30-0-38 exercise1]$ ansible-playbook facts.yml --module-path /home/hhbar/JUNIPER/library
+
+
+PLAY [Testing Juniper and Ansible] ******************************************** 
+
+GATHERING FACTS *************************************************************** 
+ok: [pynet-sf-srx]
+
+TASK: [Verifying NETCONF] ***************************************************** 
+ok: [pynet-sf-srx]
+
+TASK: [Retriev Juniper Facts] ************************************************* 
+ok: [pynet-sf-srx]
+
+TASK: [Print SRX Information] ************************************************* 
+ok: [pynet-sf-srx] => {
+    "msg": "{u'domain': None, u'serialnumber': u'BZ4614AF0938', u'ifd_style': u'CLASSIC', u'version_info': {u'major': [12, 1], u'type': u'X', u'build': 5, u'minor': [44, u'D', 35]}, u'RE0': {u'status': u'OK', u'last_reboot_reason': u'0x1:power cycle/failure', u'model': u'RE-SRX100H2', u'up_time': u'47 days, 14 hours, 54 minutes, 49 seconds'}, u'hostname': u'pynet-jnpr-srx1', u'fqdn': u'pynet-jnpr-srx1', u'has_2RE': False, u'switch_style': u'VLAN', u'version': u'12.1X44-D35.5', u'srx_cluster': False, u'HOME': u'/cf/var/home/pyclass', u'model': u'SRX100H2', u'vc_capable': False, u'personality': u'SRX_BRANCH'}"
+}
+
+PLAY RECAP ******************************************************************** 
+pynet-sf-srx               : ok=4    changed=0    unreachable=0    failed=0   
+

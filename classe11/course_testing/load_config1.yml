@@ -1,0 +1,15 @@
+---
+- name: Testing Juniper and Ansible
+  hosts: pynet-sf-srx
+  tasks: 
+    - name: Verifying NETCONF
+      wait_for: host={{ ansible_ssh_host }}  port=830      # variable defined in inventory file
+
+    - name: Add a static route
+      junos_install_config: 
+        host={{ ansible_ssh_host }}
+        file=test_config.xml
+        overwrite=false
+        user={{ juniper_user }}
+        passwd={{ juniper_password }}
+

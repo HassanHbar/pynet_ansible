@@ -1,0 +1,36 @@
+(applied_python)[hhbar@ip-172-30-0-38 exercise2]$ ansible-playbook load_config1.yml --module-path /home/hhbar/JUNIPER/library
+
+PLAY [Testing Juniper and Ansible] ******************************************** 
+
+GATHERING FACTS *************************************************************** 
+ok: [pynet-sf-srx]
+
+TASK: [Verifying NETCONF] ***************************************************** 
+ok: [pynet-sf-srx]
+
+TASK: [Add a static route] **************************************************** 
+changed: [pynet-sf-srx]
+
+PLAY RECAP ******************************************************************** 
+pynet-sf-srx               : ok=3    changed=1    unreachable=0    failed=0   
+
+(applied_python)[hhbar@ip-172-30-0-38 exercise2]$ vi exercice2.txt
+(applied_python)[hhbar@ip-172-30-0-38 ~]$ 
+(applied_python)[hhbar@ip-172-30-0-38 ~]$ ssh -l pyclass 184.105.247.76 
+pyclass@184.105.247.76's password: 
+--- JUNOS 12.1X44-D35.5 built 2014-05-19 21:36:43 UTC
+pyclass@pynet-juniper-srx1> 
+
+pyclass@pynet-juniper-srx1> 
+
+pyclass@pynet-juniper-srx1> 
+
+pyclass@pynet-juniper-srx1> 
+
+pyclass@pynet-juniper-srx1> 
+
+pyclass@pynet-juniper-srx1> 
+
+pyclass@test2> 
+
+pyclass@test2> 

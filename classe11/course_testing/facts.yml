@@ -1,0 +1,14 @@
+---
+- name: Testing Juniper and Ansible
+  hosts: juniper
+  tasks: 
+    - name: Verifying NETCONF
+      wait_for: host={{ ansible_ssh_host }}  port=830      # variable defined in inventory file
+
+    - name: Retriev Juniper Facts
+      junos_get_facts: host={{ ansible_ssh_host }} user={{ juniper_user }} passwd={{ juniper_password }}
+      register: srx_data
+
+    - name: Print SRX Information
+      debug: msg="{{ srx_data.facts.version }}"
+
